@@ -574,42 +574,27 @@ function Contact() {
 
 // ── FOOTER ────────────────────────────────────────────────────────
 function Footer() {
-  const cols = [
-    { title: "Services", links: ["Installation", "Maintenance", "Repair", "Free site survey", "Emergency call-out"] },
-    { title: "Sectors", links: ["Residential", "Commercial", "Industrial", "Surgeries & clinics", "Server rooms"] },
-    { title: "Company", links: ["About Set Temp", "Pricing & launch offer", "FAQs", "Guides", "Contact"] },
-  ];
   return (
-    <footer style={{ background: "var(--brand-navy-900)", color: "#fff", paddingTop: 72 }}>
+    <footer style={{ background: "var(--brand-navy-900)", color: "#fff", paddingTop: 56 }}>
       <Container>
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr repeat(3, 1fr)", gap: 60, paddingBottom: 56 }} className="st-footer-grid">
-          <div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 48, flexWrap: "wrap", paddingBottom: 48 }}>
+          <div style={{ maxWidth: 400 }}>
             <Logo inverted size={40}/>
-            <p style={{ margin: "20px 0 0", fontSize: 14.5, lineHeight: 1.6, color: "rgba(255,255,255,0.7)", maxWidth: 320 }}>
+            <p style={{ margin: "20px 0 0", fontSize: 14.5, lineHeight: 1.7, color: "rgba(255,255,255,0.65)" }}>
               Reliable comfort in every season — installed, serviced and repaired by an owner-led team with 9+ years of trade experience.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 24, fontSize: 14 }}>
-              <a href={`tel:${PHONE_TEL}`} style={{ color: "#fff", textDecoration: "none", fontWeight: 600, display: "inline-flex", gap: 8, alignItems: "center" }}>
-                <Icon name="phone" size={14} color="var(--brand-blue-300)"/>{PHONE_DISPLAY}
-              </a>
-              <a href={`mailto:${EMAIL}`} style={{ color: "rgba(255,255,255,0.75)", textDecoration: "none", display: "inline-flex", gap: 8, alignItems: "center" }}>
-                <Icon name="mail" size={14} color="var(--brand-blue-300)"/>{EMAIL}
-              </a>
-              <span style={{ color: "rgba(255,255,255,0.6)", display: "inline-flex", gap: 8, alignItems: "center" }}>
-                <Icon name="map-pin" size={14} color="var(--brand-blue-300)"/>South East · Kent · London
-              </span>
-            </div>
           </div>
-          {cols.map(c => (
-            <div key={c.title}>
-              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 18 }}>{c.title}</div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                {c.links.map(l => (
-                  <li key={l}><a href="#" style={{ color: "rgba(255,255,255,0.78)", textDecoration: "none", fontSize: 14.5 }}>{l}</a></li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14, fontSize: 14.5, paddingTop: 4 }}>
+            <a href={`tel:${PHONE_TEL}`} style={{ color: "#fff", textDecoration: "none", fontWeight: 600, display: "inline-flex", gap: 10, alignItems: "center" }}>
+              <Icon name="phone" size={15} color="var(--brand-blue-300)"/>{PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${EMAIL}`} style={{ color: "rgba(255,255,255,0.75)", textDecoration: "none", display: "inline-flex", gap: 10, alignItems: "center" }}>
+              <Icon name="mail" size={15} color="var(--brand-blue-300)"/>{EMAIL}
+            </a>
+            <span style={{ color: "rgba(255,255,255,0.55)", display: "inline-flex", gap: 10, alignItems: "center" }}>
+              <Icon name="map-pin" size={15} color="var(--brand-blue-300)"/>South East · Kent · London
+            </span>
+          </div>
         </div>
 
         {/* Certifications row */}
@@ -626,7 +611,6 @@ function Footer() {
               { label: "Refcom", sub: "Elite" },
               { label: "Gas Safe", sub: "Register" },
               { label: "NICEIC", sub: "Electrical" },
-              { label: "Checkatrade", sub: "9.9 / 10" },
             ].map(c => (
               <span key={c.label} style={{
                 display: "inline-flex", flexDirection: "column", padding: "8px 14px",
