@@ -311,6 +311,10 @@ a:hover { color: var(--brand-blue-700); }
     .st-contact-grid, .st-pricing-grid, .st-footer-grid {
       grid-template-columns: 1fr !important;
     }
+    .st-faq-sticky { position: static !important; }
+    .st-contact-left, .st-contact-right { padding: 32px 24px !important; }
+    .st-contact-form-footer { flex-direction: column !important; align-items: stretch !important; }
+    .st-contact-submit { width: 100% !important; justify-content: center !important; }
     .st-services-grid, .st-sector-grid, .st-guides-grid, .st-reviews-grid {
       grid-template-columns: repeat(2, 1fr) !important;
     }

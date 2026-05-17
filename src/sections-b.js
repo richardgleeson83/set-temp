@@ -284,7 +284,7 @@ function FAQ() {
     <Section id="faqs" label="FAQs" style={{ background: "#fff", padding: "112px 0" }}>
       <Container>
         <div style={{ display: "grid", gridTemplateColumns: "0.85fr 1.4fr", gap: 80, alignItems: "start" }} className="st-faq-grid">
-          <div style={{ position: "sticky", top: 100 }}>
+          <div className="st-faq-sticky" style={{ position: "sticky", top: 100 }}>
             <Eyebrow>FAQs</Eyebrow>
             <h2 style={{
               fontSize: "clamp(30px, 3.4vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.022em",
@@ -438,7 +438,7 @@ function Contact() {
           border: "1px solid var(--gray-200)", boxShadow: "var(--shadow-lg)",
         }} className="st-contact-grid">
           {/* Left: details */}
-          <div style={{
+          <div className="st-contact-left" style={{
             background: "var(--brand-navy-700)", color: "#fff",
             padding: "48px 44px", position: "relative", overflow: "hidden",
           }}>
@@ -502,7 +502,7 @@ function Contact() {
           </div>
 
           {/* Right: form */}
-          <div style={{ padding: "44px 44px", position: "relative" }}>
+          <div className="st-contact-right" style={{ padding: "44px 44px", position: "relative" }}>
             {status === "done" ? (
               <div style={{ display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start", padding: "32px 0" }}>
                 <span style={{
@@ -554,12 +554,12 @@ function Contact() {
               <Field label="Tell us about your project" as="textarea" rows={4}
                 placeholder="A few words on the space, number of rooms, any deadlines or constraints…"
                 value={form.message} onChange={set("message")}/>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, marginTop: 4, flexWrap: "wrap" }}>
+              <div className="st-contact-form-footer" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, marginTop: 4, flexWrap: "wrap" }}>
                 <span style={{ fontSize: 12, color: "var(--gray-500)", maxWidth: 360, lineHeight: 1.4 }}>
                   By submitting you agree to our privacy policy. We never share details and don't run marketing follow-ups.
                 </span>
                 <Button variant="primary" size="xl" type="submit" trailingIcon={status === "submitting" ? "loader-2" : "arrow-right"}
-                  disabled={status === "submitting"}>
+                  disabled={status === "submitting"} className="st-contact-submit">
                   {status === "submitting" ? "Sending…" : "Request my free quote"}
                 </Button>
               </div>
