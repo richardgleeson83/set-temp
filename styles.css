@@ -267,6 +267,7 @@ a:hover { color: var(--brand-blue-700); }
 
 
   * { box-sizing: border-box; }
+  input, select, textarea { min-width: 0; width: 100%; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #fff; color: var(--brand-navy-700); }
   a { color: inherit; }
