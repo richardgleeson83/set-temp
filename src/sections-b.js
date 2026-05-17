@@ -451,15 +451,15 @@ function Contact() {
               <Pill tone="navy" icon="zap" style={{
                 background: "rgba(247,144,9,0.16)", borderColor: "rgba(247,144,9,0.40)",
                 color: "var(--warning-500)", fontWeight: 600, alignSelf: "flex-start",
-              }}>Response within 2 hours</Pill>
+              }}>Quick responses</Pill>
               <h2 style={{
                 fontSize: "clamp(28px, 3vw, 38px)", lineHeight: 1.1, letterSpacing: "-0.02em",
                 fontWeight: 600, margin: 0, color: "#fff", textWrap: "balance",
               }}>
-                Talk to an engineer, not a call centre.
+                Give Jack a call.
               </h2>
               <p style={{ margin: 0, fontSize: 16, lineHeight: 1.55, color: "rgba(255,255,255,0.78)" }}>
-                Drop us a few details and we'll come back with a clear plan — site survey, fixed quote, install timeline. No spam, no follow-up calls.
+                Drop us a few details and we'll be in touch quickly with a response.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 4, marginTop: 8 }}>
                 {[
@@ -536,7 +536,7 @@ function Contact() {
                   Request a free consultation
                 </h3>
                 <p style={{ margin: "4px 0 0", fontSize: 14, color: "var(--gray-600)" }}>
-                  Takes a minute. We'll respond inside 2 working hours.
+                  We'll try to respond inside 2 working hours.
                 </p>
               </div>
               <Field label="Full name" placeholder="Full Name" value={form.name} onChange={set("name")} icon="user" required/>
